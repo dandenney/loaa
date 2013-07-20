@@ -9,7 +9,12 @@
 //   @font-face
 // -------------------------------------
 
-// ...
+@font-face
+  font-family: 'Chunkfive'
+  src: url('Chunkfive-webfont.eot')
+  src: url('Chunkfive-webfont.eot?#iefix') format("embedded-opentype"), url('Chunkfive-webfont.woff') format("woff"), url('Chunkfive-webfont.ttf') format("truetype"), url('Chunkfive-webfont.svg#KomikaAxisRegular') format("svg")
+  font-weight: normal
+  font-style: normal
 
 // -------------------------------------
 //   Variables
@@ -18,29 +23,46 @@
 // ----- Base Colors ----- //
 
 $base-background: #fff
-$base-color: #222
-$base-link-color: #0053c9
+$base-color: #252525
+$base-link-color: #e80855
+
+// ----- Theme Colors ----- //
+
+$theme-highlight: #ddd13c
+$theme-light: #ebebeb
+$theme-dark: #363636
+$theme-featureA: #e80855
+$theme-featureB: #1db9ce
+
+$rainbow-a: #b0e2ef
+$rainbow-b: #1db9ce
+$rainbow-c: #ffe030
+$rainbow-d: #f4753a
+$rainbow-e: #f0363b
+$rainbow-f: #e80855
 
 // ----- Base Borders & Box Shadows ----- //
 
-$base-border: 1px solid $base-color
-$base-borderRadius: 3px
-$base-boxShadow: 0 1px 2px rgba($base-color, 0.25)
+// TODO: Remove these if none are found
+
+// $base-border: 1px solid $base-color
+// $base-borderRadius: 3px
+// $base-boxShadow: 0 1px 2px rgba($base-color, 0.25)
 
 // ----- Base Content ----- //
 
-$base-fontFamily: sans-serif
-$base-fontSize: 16px
-$base-lineHeight: 1.5
+$base-fontFamily: 'Titillium Web', sans-serif
+$base-fontSize: 20px
+$base-lineHeight: (35 / 20)
 
 // ----- Base Layout ----- //
 
-$base-whitespace: 20px
+$base-whitespace: 40px
 
 // ----- Content ----- //
 
-$c-header-fontFamily: sans-serif
+$c-header-fontFamily: 'ChunkFive', Georgia, sans-serif
 
 // ----- Layout ----- //
 
-$l-maxWidth: 980px
+$l-maxWidth: 940px

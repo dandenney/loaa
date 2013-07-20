@@ -1,15 +1,28 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>{% block title %}Mixture + Compass{% endblock %}</title>
-        {{ "your-project.css" | asset_url | stylesheet_tag }}
-        <!-- TODO: Complete this project :) -->
-    </head>
-    <body class="wrapper">
-        {% include "navigation" %}
-        <div class="container">
-            {% block content %}{% endblock %}
-        </div>
-    </body>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Life of An App{% endblock %}</title>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600' rel='stylesheet' type='text/css'>
+    {{ "application.css" | asset_url | stylesheet_tag }}     
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  </head>
+  
+  <body class="wrapper">
+
+    <header>
+      {% include "header" %}
+    </header>
+    
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+      {% include "footer" %}
+    </footer>
+
+  </body>
+
 </html>
