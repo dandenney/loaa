@@ -378,9 +378,15 @@ table {
 @font-face {
   font-family: "Chunkfive";
   src: url("Chunkfive-webfont.eot");
-  src: url("Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("Chunkfive-webfont.woff") format("woff"), url("Chunkfive-webfont.ttf") format("truetype"), url("Chunkfive-webfont.svg#KomikaAxisRegular") format("svg");
+  src: url("../fonts/Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Chunkfive-webfont.woff") format("woff"), url("../Chunkfive-webfont.ttf") format("truetype"), url("../Chunkfive-webfont.svg#KomikaAxisRegular") format("svg");
   font-weight: normal;
   font-style: normal;
+}
+
+header:after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 html {
@@ -445,6 +451,13 @@ ol {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.list-inline li, .nav-list li {
+  display: inline-block;
+}
+.list-inline li + li, .nav-list li + li {
+  margin-left: 20px;
 }
 
 .c-center {
@@ -692,11 +705,11 @@ h5, .c-h5, .c-shout {
   background: white;
 }
 
-.theme--highlight {
+.theme--highlight, header {
   background: #ddd13c;
   color: white;
 }
-.theme--highlight h1, .theme--highlight h2, .theme--highlight h3, .theme--highlight h4, .theme--highlight h5, .theme--highlight h6 {
+.theme--highlight h1, header h1, .theme--highlight h2, header h2, .theme--highlight h3, header h3, .theme--highlight h4, header h4, .theme--highlight h5, header h5, .theme--highlight h6, header h6 {
   color: white;
 }
 
@@ -710,6 +723,51 @@ h5, .c-h5, .c-shout {
 }
 .theme--dark h1, .theme--dark h2, .theme--dark h3, .theme--dark h4, .theme--dark h5, .theme--dark h6 {
   color: #ebebeb;
+}
+
+header {
+  padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 40px;
+  }
+}
+header .icn-temp {
+  background: url('../images/icons-2x/hamburger.png?1374348183');
+  background-size: 15px 13px;
+  display: inline-block;
+  height: 13px;
+  width: 15px;
+}
+
+.header-logo {
+  float: left;
+  max-height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .header-logo {
+    max-height: inherit;
+  }
+}
+
+nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  nav {
+    display: block;
+    float: right;
+  }
+}
+
+.nav-toggle {
+  float: right;
+}
+@media screen and (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
 }
 
 .styleguide-divider {

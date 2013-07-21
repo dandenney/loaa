@@ -1,0 +1,20 @@
+// *************************************
+//
+//   Nav
+//   -> This is the nav styles
+//
+// *************************************
+
+nav
+  display: none
+  +respond-to(768px)
+    display: block
+    float: right
+    
+.nav-toggle
+  float: right
+  +respond-to(768px)
+    display: none
+    
+.nav-list
+  @extend .list-inline

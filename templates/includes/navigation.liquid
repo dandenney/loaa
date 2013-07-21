@@ -1,4 +1,10 @@
-<ul class="nav">
-	<li {% if mixture.url == "index" %}class="current"{% endif %}><a href="/">Home</a></li>
-	<li {% if mixture.url == "model" %}class="current"{% endif %}><a href="/model">Model</a></li>
-</ul>
+<button class="btn--b nav-toggle">
+  <i class="icn-temp"></i>
+</button>
+
+<nav>
+  <ul class="nav-list">
+  	<li {% if mixture.url == "index" %}class="current"{% endif %}><a href="/">Home</a></li>
+  	<li {% if mixture.url == "model" %}class="current"{% endif %}><a href="/model">Model</a></li>
+  </ul>
+</nav>
