@@ -1,0 +1,76 @@
+// *************************************
+//
+//   Landmarks
+//   -> The styled elements with icons to indicate areas
+//
+// *************************************
+
+%landmark
+  background-color: #fff
+  border: 5px solid #fff
+  border-radius: 50%
+  display: inline-block
+  height: 84px
+  position: relative
+  width: 84px
+  &:after
+    content: ""
+    background-color: #fff
+    bottom: -15px
+    display: block
+    left: 50%
+    margin-left: -2px
+    height: 10px
+    position: absolute
+    width: 4px
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+$landmark-pairs: (a $rainbow-a) (b $rainbow-b) (c $rainbow-c) (d $rainbow-d) (e $rainbow-e) (f $rainbow-f)
+
+@each $landmark in $landmark-pairs
+  $name: nth($landmark, 1)
+  $color: nth($landmark, 2)
+  .landmark--#{$name}
+    @extend %landmark
+    background-color: $color
+    &:after
+      background-color: $color
+  .landmark-title--#{$name}
+    @extend %landmark-title
+    background-color: $color
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .is-landmark-state
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-landmark
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// ----- Submodule ----- //
+
+.landmark-pair
+  text-align: center
+  width: 110px
+
+%landmark-title
+  border-radius: 20px
+  color: $theme
+  font-size: rem(12px)
+  margin: 15px auto 0
+  text-align: center
+  text-transform: uppercase
+  width: 110px
+
+

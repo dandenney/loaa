@@ -6,16 +6,47 @@
 // *************************************
 
 // -------------------------------------
+//   Inner
+// -------------------------------------
+
+.inner
+  max-width: $l-maxWidth
+  margin: 0 auto
+  width: 87.5%
+
+// -------------------------------------
 //   Bucket
 // -------------------------------------
 
-// .l-bucket
+.l-bucket--text
+  padding: 0 ($base-whitespace * 1.5)
+  text-align: center
 
 // -------------------------------------
 //   Card
 // -------------------------------------
 
-// .l-card
+%l-card
+  background: url(../images/stripes.png) $theme--featureA
+  border: 2px solid $theme--featureA
+  .title
+    background: #fff
+    color: $theme--featureA
+    margin: 0
+  .content
+    color: #fff
+    font-size: rem(18px)
+    padding: $base-whitespace
+    
+.l-card--a
+  @extend %l-card
+  
+.l-card--b
+  @extend %l-card
+  background-color: $theme--featureB
+  border-color: $theme--featureB
+  .title
+    color: $theme--featureB
 
 // -------------------------------------
 //   Cell

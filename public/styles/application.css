@@ -440,7 +440,10 @@ h6, .c-h6 {
   font-size: 1.5rem;
 }
 
-ul {
+ul,
+ol {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -458,6 +461,40 @@ ul {
 
 h5, .c-h5, .c-shout {
   text-transform: uppercase;
+}
+
+.inner {
+  max-width: 940px;
+  margin: 0 auto;
+  width: 87.5%;
+}
+
+.l-bucket--text {
+  padding: 0 60px;
+  text-align: center;
+}
+
+.l-card--a, .l-card--b {
+  background: url(../images/stripes.png) #e80855;
+  border: 2px solid #e80855;
+}
+.l-card--a .title, .l-card--b .title {
+  background: white;
+  color: #e80855;
+  margin: 0;
+}
+.l-card--a .content, .l-card--b .content {
+  color: white;
+  font-size: 0.9rem;
+  padding: 40px;
+}
+
+.l-card--b {
+  background-color: #1db9ce;
+  border-color: #1db9ce;
+}
+.l-card--b .title {
+  color: #1db9ce;
 }
 
 .l-cell {
@@ -491,7 +528,7 @@ h5, .c-h5, .c-shout {
 }
 
 .icn-temp {
-  background: url('../images/icons-2x/hamburger.png?1374346908');
+  background: url('../images/icons-2x/hamburger.png?1374348183');
   background-size: 31px 27px;
   display: inline-block;
   height: 27px;
@@ -549,6 +586,137 @@ h5, .c-h5, .c-shout {
   display: inline-block;
 }
 
-.styleguide-inlineList li {
+.landmark--a, .landmark--b, .landmark--c, .landmark--d, .landmark--e, .landmark--f {
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 50%;
   display: inline-block;
+  height: 84px;
+  position: relative;
+  width: 84px;
+}
+.landmark--a:after, .landmark--b:after, .landmark--c:after, .landmark--d:after, .landmark--e:after, .landmark--f:after {
+  content: "";
+  background-color: white;
+  bottom: -15px;
+  display: block;
+  left: 50%;
+  margin-left: -2px;
+  height: 10px;
+  position: absolute;
+  width: 4px;
+}
+
+.landmark--a {
+  background-color: #b0e2ef;
+}
+.landmark--a:after {
+  background-color: #b0e2ef;
+}
+
+.landmark-title--a {
+  background-color: #b0e2ef;
+}
+
+.landmark--b {
+  background-color: #1db9ce;
+}
+.landmark--b:after {
+  background-color: #1db9ce;
+}
+
+.landmark-title--b {
+  background-color: #1db9ce;
+}
+
+.landmark--c {
+  background-color: #ffe030;
+}
+.landmark--c:after {
+  background-color: #ffe030;
+}
+
+.landmark-title--c {
+  background-color: #ffe030;
+}
+
+.landmark--d {
+  background-color: #f4753a;
+}
+.landmark--d:after {
+  background-color: #f4753a;
+}
+
+.landmark-title--d {
+  background-color: #f4753a;
+}
+
+.landmark--e {
+  background-color: #f0363b;
+}
+.landmark--e:after {
+  background-color: #f0363b;
+}
+
+.landmark-title--e {
+  background-color: #f0363b;
+}
+
+.landmark--f {
+  background-color: #e80855;
+}
+.landmark--f:after {
+  background-color: #e80855;
+}
+
+.landmark-title--f {
+  background-color: #e80855;
+}
+
+.landmark-pair {
+  text-align: center;
+  width: 110px;
+}
+
+.landmark-title--a, .landmark-title--b, .landmark-title--c, .landmark-title--d, .landmark-title--e, .landmark-title--f {
+  border-radius: 20px;
+  color: white;
+  font-size: 0.6rem;
+  margin: 15px auto 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 110px;
+}
+
+.theme {
+  background: white;
+}
+
+.theme--highlight {
+  background: #ddd13c;
+  color: white;
+}
+.theme--highlight h1, .theme--highlight h2, .theme--highlight h3, .theme--highlight h4, .theme--highlight h5, .theme--highlight h6 {
+  color: white;
+}
+
+.theme--light {
+  background: #ebebeb;
+}
+
+.theme--dark {
+  background: #363636;
+  color: #ebebeb;
+}
+.theme--dark h1, .theme--dark h2, .theme--dark h3, .theme--dark h4, .theme--dark h5, .theme--dark h6 {
+  color: #ebebeb;
+}
+
+.styleguide-divider {
+  border: 0;
+  border-top: 1px solid #f1f1f1;
+  display: block;
+  height: 1px;
+  margin: 40px 0;
+  padding: 0;
 }
