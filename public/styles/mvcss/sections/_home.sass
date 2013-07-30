@@ -1,0 +1,165 @@
+// *************************************
+//
+//   Home
+//   -> This is the styles specific to the home page
+//
+// *************************************
+
+// -------------------------------------
+//   Home Hero
+// -------------------------------------
+
+.home-hero
+  @extend .theme--highlight
+  padding-top: 0
+  text-align: center
+  h1
+    margin: 0
+  h6
+    margin-top: 0
+
+// -------------------------------------
+//   Home Landmarks
+// -------------------------------------
+
+.home-landmarks
+  margin-top: -($base-whitespace)
+  +respond-to(768px)
+    margin-top: -75px
+  +respond-to(1000px)
+    margin-top: -85px
+
+.list-landmarks
+  @extend %c-list--inline
+  margin: -60px auto 0 
+  li
+    margin-bottom: ($base-whitespace / 2)
+    vertical-align: top
+    width: 31%
+  .landmark
+    height: 30px
+    width: 30px
+  .landmark-title
+    width: 70px
+    
+// -------------------------------------
+//   Home Info
+// -------------------------------------
+
+.home-info
+  margin: -($base-whitespace) 0 $base-whitespace
+
+.home-features
+  font-size: rem(16px)
+  padding-top: $base-whitespace
+  
+  .l-card--b
+    margin-top: $base-whitespace
+  
+  +respond-to(768px)
+    .grid-wholeToHalf,
+    .l-card--a,
+    .l-card--b
+      min-height: 330px
+    
+    .l-card--b
+      margin-top: 0
+  
+  +respond-to(1000px)
+    .grid-wholeToHalf,
+    .l-card--a,
+    .l-card--b
+      min-height: 430px
+  
+.feature-location
+  border-top: 2px solid #fff
+  
+.feature-date,
+.feature-location
+  padding: ($base-whitespace / 1.5) ($base-whitespace / 3)
+  +respond-to(1000px)
+    padding: $base-whitespace
+    
+.feature-list
+  padding: ($base-whitespace / 1.5)
+  +respond-to(1000px)
+    padding: $base-whitespace
+
+    
+// -------------------------------------
+//   Home CTA
+// -------------------------------------
+
+.home-cta
+  padding: 0 0 ($base-whitespace * 1.5) 0
+  .inner
+    border-top: 1px solid #c2c2c2
+    padding: ($base-whitespace * 1.5) 0 0 0
+  p
+    font-size: rem(30px)
+    line-height: 1.2
+    margin-bottom: ($base-whitespace / 2)
+    text-align: center
+    +respond-to(768px)
+      margin-bottom: 0
+      text-align: left
+  .btn--a
+    display: block
+    margin: 0 auto
+    max-width: 280px
+    text-align: center
+    
+// -------------------------------------
+//   Home Why
+// -------------------------------------
+
+.home-why
+  @extend .theme--light
+  h2
+    margin-bottom: 0
+    text-align: center
+  
+.why-lines
+  display: none
+  @extend .grid-box
+  @extend .grid-box--1of4
+  padding-top: ($base-whitespace / 1.5)
+  +respond-to(768px)
+    display: block
+  
+.why-points
+  @extend .grid-box
+  @extend .grid-box--1of1
+  @extend .grid-box--tablet--3of4
+  h2
+    margin-bottom: 0
+
+
+.why-list
+  li
+    @extend %group
+    padding-left: 70px
+    vertical-align: top
+    + li
+      margin-top: ($base-whitespace / 2.5)
+      +respond-to(820px)
+        margin-top: ($base-whitespace / 2)
+      +respond-to(860px)
+        margin-top: ($base-whitespace / 1.5)
+      +respond-to(900px)
+        margin-top: ($base-whitespace / 1.25)
+      +respond-to(940px)
+        margin-top: $base-whitespace
+  i,
+  p
+    display: inline-block
+    font-size: rem(17px)
+    margin: 0
+    padding-left: 10px
+  i
+    margin: 5px 0 0 -80px
+    vertical-align: top
+  p
+    margin-top: ($base-whitespace / 5)
+    +respond-to(768px)
+      margin-top: 0

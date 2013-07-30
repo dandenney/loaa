@@ -5,18 +5,20 @@
 //
 // *************************************
 
-%landmark
-  background-color: #fff
-  border: 5px solid #fff
-  border-radius: 50%
+.landmark
+  // background-color: #fff
+  // border: 5px solid #fff
+  // border-radius: 50%
   display: inline-block
-  height: 84px
+  // height: 84px
+  margin: 0 auto
   position: relative
-  width: 84px
+  width: 81%
+  // width: 84px
   &:after
     content: ""
     background-color: #fff
-    bottom: -15px
+    bottom: -10px
     display: block
     left: 50%
     margin-left: -2px
@@ -34,12 +36,27 @@ $landmark-pairs: (a $rainbow-a) (b $rainbow-b) (c $rainbow-c) (d $rainbow-d) (e 
   $name: nth($landmark, 1)
   $color: nth($landmark, 2)
   .landmark--#{$name}
-    @extend %landmark
-    background-color: $color
+    @extend .landmark
+    background-image: url('../images/icons/rainbow-#{$name}.png')
+    background-size: 40px 40px
+    display: inline-block
+    height: 40px
+    width: 40px
     &:after
       background-color: $color
+      display: none
+      +respond-to(768px)
+        display: inline-block
+    +respond-to(768px)
+      background-size: 70px 70px
+      height: 70px
+      width: 70px
+    +respond-to(1000px)
+      background-size: 90px 90px
+      height: 90px
+      width: 90px
   .landmark-title--#{$name}
-    @extend %landmark-title
+    @extend .landmark-title
     background-color: $color
 
 // -------------------------------------
@@ -60,17 +77,29 @@ $landmark-pairs: (a $rainbow-a) (b $rainbow-b) (c $rainbow-c) (d $rainbow-d) (e 
 
 // ----- Submodule ----- //
 
+.landmarks-list
+  @extend %group
+  @extend .inner
+  li
+    +box-sizing(border-box)
+    float: left
+    width: percentage(0.8 / 6)
+    + li 
+      margin-left: 4%
+      
 .landmark-pair
   text-align: center
-  width: 110px
 
-%landmark-title
+.landmark-title
   border-radius: 20px
   color: $theme
+  display: none
   font-size: rem(12px)
-  margin: 15px auto 0
+  margin: 5px auto 0
   text-align: center
   text-transform: uppercase
-  width: 110px
+  +respond-to(768px)
+    display: block
+
 
 

@@ -13,13 +13,18 @@ h1, h2, h3,
 h4, h5, h6
   font-family: $c-header-fontFamily
   font-weight: normal
-  margin: $base-whitespace
+  margin: $base-whitespace 0
 
 h1, .c-h1, %c-h1
-  font-size: rem(112px)
+  font-size: rem(56px)
+  margin-top: 0
+  text-align: center
+  +respond-to(768px)
+    font-size: rem(112px)
 
 h2, .c-h2, %c-h2
   font-size: rem(60px)
+  margin-top: 0
 
 h3, .c-h3, %c-h3
   font-size: rem(50px)
@@ -36,6 +41,14 @@ h6, .c-h6, %c-h6
   font-family: $base-fontFamily
   font-size: rem(30px)
   
+// -------------------------------------
+//   Containing Elements
+// -------------------------------------
+  
+section
+  padding: ($base-whitespace / 2) 0
+  +respond-to(768px)
+    padding: $base-whitespace 0
 
 // -------------------------------------
 //   Lists
@@ -47,11 +60,13 @@ ol
   padding: 0
   list-style: none
   
-.list-inline
+%c-list--inline, .c-list--inline
   li
     display: inline-block
-    + li
-      margin-left: ($base-whitespace / 2)
+    
+%c-list--bulleted, .c-list--bulleted
+  li
+    list-style: disc
 
 // -------------------------------------
 //   Utilities

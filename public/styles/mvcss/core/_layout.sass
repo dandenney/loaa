@@ -19,28 +19,31 @@
 // -------------------------------------
 
 .l-bucket--text
-  padding: 0 ($base-whitespace * 1.5)
-  text-align: center
+  +respond-to(768px)
+    padding: 0 ($base-whitespace * 1.5)
+    text-align: center
 
 // -------------------------------------
 //   Card
 // -------------------------------------
 
 %l-card
+  +box-sizing(border-box)
   background: url(../images/stripes.png) $theme--featureA
   border: 2px solid $theme--featureA
   .title
     background: #fff
     color: $theme--featureA
     margin: 0
+    text-align: center
   .content
+    +box-sizing(border-box)
     color: #fff
     font-size: rem(18px)
-    padding: $base-whitespace
+    text-transform: uppercase
     
 .l-card--a
   @extend %l-card
-  
 .l-card--b
   @extend %l-card
   background-color: $theme--featureB

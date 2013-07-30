@@ -1,3 +1,4 @@
+
 // *************************************
 //
 //   Base
@@ -6,7 +7,11 @@
 // *************************************
 
 html
-  font-size: $base-fontSize
+  font-size: ($base-fontSize * 0.7)
+  +respond-to(768px)
+    font-size: ($base-fontSize * 0.85)
+  +respond-to(1000px)
+    font-size: $base-fontSize
 
 body
   background: $base-background
@@ -32,3 +37,6 @@ a
   &:hover,
   &:focus
     text-decoration: underline
+    
+img
+  max-width: 100%

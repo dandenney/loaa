@@ -1,0 +1,20 @@
+// *************************************
+//
+//   Footer
+//   -> This is the footer styles
+//
+// *************************************
+
+footer  
+  @extend %group
+  @extend .theme--dark
+  padding: ($base-whitespace / 4) 0
+  +respond-to(768px)
+    padding: ($base-whitespace / 2) 0
+  text-align: center
+  p,
+  p > a
+    display: inline-block
+    vertical-align: middle
+  p > a
+    margin-left: ($base-whitespace / 4)
