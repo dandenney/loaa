@@ -4,6 +4,19 @@
 //   -> This is the icons styles
 // *************************************
 
+// Icon Font
+
+[data-icon]:before
+  -webkit-font-smoothing: antialiased
+  content: attr(data-icon)
+  font-family: 'IconFont'
+  font-style: normal
+  font-weight: normal
+  line-height: 1
+  position: relative
+  top: 0.1em
+  speak: none
+
 // ----- Icon Default Variables ----- //
 
 $icons: sprite-map("icons/*.png")

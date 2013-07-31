@@ -163,3 +163,36 @@
     margin-top: ($base-whitespace / 5)
     +respond-to(768px)
       margin-top: 0
+      
+// -------------------------------------
+//   Home Sponsors
+// -------------------------------------
+
+.home-sponsors
+  text-align: center  
+  
+// -------------------------------------
+//   Home Attending
+// -------------------------------------
+
+.home-attending
+  @extend .theme--light
+  text-align: center
+    
+  .l-card--c
+    img
+      margin: ($base-whitespace / 4) 0 ($base-whitespace / 8)
+      width: 100px
+    strong
+      font-family: $c-header-fontFamily
+      font-weight: normal
+      
+.attendee-title,    
+.attendee-company
+  font-size: 14px
+  line-height: 1.3
+  margin: 0
+
+.attendee-company
+  color: #9999a1
+  font-size: rem(13px)
