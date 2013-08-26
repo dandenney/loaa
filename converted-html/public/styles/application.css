@@ -377,8 +377,16 @@ table {
 
 @font-face {
   font-family: "Chunkfive";
-  src: url("Chunkfive-webfont.eot");
-  src: url("../fonts/Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Chunkfive-webfont.woff") format("woff"), url("../Chunkfive-webfont.ttf") format("truetype"), url("../Chunkfive-webfont.svg#KomikaAxisRegular") format("svg");
+  src: url("../fonts/Chunkfive-webfont.eot");
+  src: url("../fonts/Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Chunkfive-webfont.woff") format("woff"), url("../Chunkfive-webfont.ttf") format("truetype"), url("../Chunkfive-webfont.svg#ChunkFive") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IconFont";
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../icomoon.ttf") format("truetype"), url("../icomoon.svg#IconFont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -549,6 +557,26 @@ h5, .c-h5, .c-shout {
 }
 .l-card--b .title {
   color: #1db9ce;
+}
+
+.l-card--c {
+  background: #fdfdfd;
+  background-clip: padding-box;
+  border: 1px solid #ececec;
+  border-radius: 9px;
+  display: inline-block;
+  margin: 0 7px 20px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  width: 220px;
+}
+.l-card--c strong {
+  display: block;
+  line-height: 1.1;
+  padding: 5px 10px;
+}
+.l-card--c a {
+  margin: 0 5px;
 }
 
 .l-cell {
@@ -898,6 +926,18 @@ h5, .c-h5, .c-shout {
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
+}
+
+[data-icon]:before {
+  -webkit-font-smoothing: antialiased;
+  content: attr(data-icon);
+  font-family: "IconFont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  position: relative;
+  top: 0.1em;
+  speak: none;
 }
 
 i {
@@ -1602,7 +1642,7 @@ i {
   color: white;
 }
 
-.theme--light, .home-why {
+.theme--light, .home-why, .home-attending {
   background: #ebebeb;
 }
 
@@ -1861,6 +1901,34 @@ footer p > a {
   .why-list p {
     margin-top: 0;
   }
+}
+
+.home-sponsors {
+  text-align: center;
+}
+
+.home-attending {
+  text-align: center;
+}
+.home-attending .l-card--c img {
+  margin: 10px 0 5px;
+  width: 100px;
+}
+.home-attending .l-card--c strong {
+  font-family: "ChunkFive", Georgia, sans-serif;
+  font-weight: normal;
+}
+
+.attendee-title,
+.attendee-company {
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.attendee-company {
+  color: #9999a1;
+  font-size: 0.65rem;
 }
 
 .styleguide-divider {
