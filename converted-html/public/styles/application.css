@@ -1906,6 +1906,15 @@ footer p > a {
 .home-sponsors {
   text-align: center;
 }
+.home-sponsors .l-card--c {
+  font-size: 0.75em;
+  vertical-align: top;
+}
+.home-sponsors .l-card--c img {
+  margin: 0.5rem auto;
+  max-height: 2.5rem;
+  max-width: 90%;
+}
 
 .home-attending {
   text-align: center;
