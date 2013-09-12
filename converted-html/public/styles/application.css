@@ -1,4 +1,4 @@
-/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -1906,14 +1906,43 @@ footer p > a {
 .home-sponsors {
   text-align: center;
 }
+.home-sponsors h5 {
+  margin: 0.5em 0;
+}
 .home-sponsors .l-card--c {
   font-size: 0.75em;
+  min-height: 135px;
   vertical-align: top;
 }
 .home-sponsors .l-card--c img {
   margin: 0.5rem auto;
   max-height: 2.5rem;
   max-width: 90%;
+}
+
+.sponsor--f, .sponsor--e, .sponsor--d, .sponsor--c, .sponsor--b {
+  border: 1px solid white;
+  margin: 2em 0 0 0;
+}
+
+.sponsor--f {
+  border-color: #e80855;
+}
+
+.sponsor--e {
+  border-color: #f0363b;
+}
+
+.sponsor--d {
+  border-color: #f4753a;
+}
+
+.sponsor--c {
+  border-color: #1db9ce;
+}
+
+.sponsor--b {
+  border-color: #ffe030;
 }
 
 .home-attending {

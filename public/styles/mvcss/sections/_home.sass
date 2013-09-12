@@ -171,13 +171,41 @@
 .home-sponsors
   text-align: center  
   
+  h5
+    margin: 0.5em 0
+  
   .l-card--c 
     font-size: 0.75em
+    min-height: 135px
     vertical-align: top
     img
       margin: rem(10px) auto
       max-height: rem(50px)
       max-width: 90%
+      
+%sponsor-border
+  border: 1px solid #fff
+  margin: 2em 0  0 0
+      
+.sponsor--f
+  @extend %sponsor-border
+  border-color: $rainbow-f
+  
+.sponsor--e
+  @extend %sponsor-border
+  border-color: $rainbow-e
+  
+.sponsor--d
+  @extend %sponsor-border
+  border-color: $rainbow-d
+  
+.sponsor--c
+  @extend %sponsor-border
+  border-color: $rainbow-b
+  
+.sponsor--b
+  @extend %sponsor-border
+  border-color: $rainbow-c
   
 // -------------------------------------
 //   Home Attending
