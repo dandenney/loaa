@@ -1922,6 +1922,7 @@ footer p > a {
 
 .sponsor--f, .sponsor--e, .sponsor--d, .sponsor--c, .sponsor--b {
   border: 1px solid white;
+  border-radius: 10px;
   margin: 2em 0 0 0;
 }
 
